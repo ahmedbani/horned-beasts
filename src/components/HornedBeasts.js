@@ -1,6 +1,5 @@
-import { template } from '@babel/core';
 import React from 'react';
-import { Card, Button, CardGroup, CardColumns } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
 class HornedBeasts extends React.Component {
 
@@ -8,11 +7,11 @@ class HornedBeasts extends React.Component {
         super(props);
         this.state = {
             counter: 0
-        }
+        };
     }
 
     increment = () => {
-        this.setState({ counter: this.state.counter + 1 })
+        this.setState({ counter: this.state.counter + 1 });
     }
 
     render() {
