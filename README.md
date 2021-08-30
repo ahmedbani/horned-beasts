@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### overview 
+
+hi I'm ahmed bani-salameh and I'm working on this project horned-beasts, horned-beasts is a website that displays beasts with horns with an image of the beast its name and a description about it , you can also vote for the beasts you liked the most.  
+
+Number and name of feature:  
+Feature 1: Display images  
+Feature 2: Allow users to vote for their favorite beast  
+Feature 3: Bootstrap
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1:25 pm
+
+Finish time: 3:05 pm
+
+Actual time needed to complete: 1 hour and 40 minutes
