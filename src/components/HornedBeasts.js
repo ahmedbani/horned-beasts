@@ -7,12 +7,14 @@ class HornedBeasts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            counter: 0
+            counter: 0 ,
+            show : false
         };
     }
 
     increment = () => {
-        this.setState({ counter: this.state.counter + 1 });
+        this.setState({ counter: this.state.counter + 1 , show: this.state.true });
+        this.props.click(this.props.imageUrl);
     }
 
     render() {
