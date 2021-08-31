@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Col } from 'react-bootstrap';
+
 
 class HornedBeasts extends React.Component {
 
@@ -17,7 +18,8 @@ class HornedBeasts extends React.Component {
     render() {
         return (
             <>
-                <Card style={{ width: '18rem' , height:'34rem', display: 'inline-grid', margin: ' 10px' }}>
+             <Col>
+                <Card style={{ width: '18rem' , height:'34rem'}}>
                     <Card.Img variant="top" src={this.props.imageUrl} onClick={this.increment} style={{height: '18rem'} }/>
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
@@ -28,7 +30,7 @@ class HornedBeasts extends React.Component {
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
-               
+            </Col>
             </>
         );
     }
