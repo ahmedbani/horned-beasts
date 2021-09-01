@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import data from './components/hornedBeasts.json';
 import SelectedBeast from "./components/SelectedBeast";
 
+
 class App extends React.Component{
 
   constructor(props){
@@ -13,7 +14,8 @@ class App extends React.Component{
     this.state ={
       info:data,
       selected :{} ,
-      show : false
+      show : false ,
+      horns : 'All'
       
     };
   }
@@ -33,12 +35,57 @@ class App extends React.Component{
       show: true,
     });
   };
+
+  filter = numberOfHorns => {
+    if(numberOfHorns === 'All'){
+      this.setState({
+        info : data ,
+        horns : 'All'
+      });
+    }else if (numberOfHorns === '1'){
+      this.setState({
+        info : data.filter(item => {
+          if(item.horns=== 1){
+            return true ;
+          }
+        }),
+        horns : 1
+      });
+    }else if( numberOfHorns === '2'){
+      this.setState({
+        info : data.filter(item => {
+          if(item.horns=== 2){
+            return true ;
+          }
+        }),
+        horns : 2
+      });
+    }else if( numberOfHorns === '3'){
+      this.setState({
+        info : data.filter(item => {
+          if(item.horns=== 3){
+            return true ;
+          }
+        }),
+        horns : 3
+      });
+    }else {
+      this.setState({
+        info : data.filter(item => {
+          if(item.horns=== 100){
+            return true ;
+          }
+        }),
+        horns : 100
+      });
+    }
+  }
   
   render(){
     return (
       <>
       <Header />
-      <Main data = {this.state.info} click = {this.select}/>
+      <Main data = {this.state.info} click = {this.select} filter = {this.filter}/>
       <Footer />
       <SelectedBeast beastToShow = {this.state.selected} closeModal = {this.closeModal} display={this.state.show}/>
 
